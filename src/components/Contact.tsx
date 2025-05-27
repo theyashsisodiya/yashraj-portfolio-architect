@@ -1,9 +1,11 @@
-
 import { Mail, Phone, Github } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Contact = () => {
+  const { ref: contactRef, isVisible: contactVisible } = useScrollAnimation();
+  
   const contactMethods = [
     {
       icon: <Mail className="w-6 h-6" />,
@@ -26,7 +28,13 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800">
+    <section 
+      id="contact" 
+      ref={contactRef}
+      className={`py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 transition-all duration-1000 ${
+        contactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">

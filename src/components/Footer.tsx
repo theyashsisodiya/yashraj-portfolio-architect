@@ -1,7 +1,15 @@
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Footer = () => {
+  const { ref: footerRef, isVisible: footerVisible } = useScrollAnimation();
+
   return (
-    <footer className="bg-gray-900 text-white py-8">
+    <footer 
+      ref={footerRef}
+      className={`bg-gray-900 text-white py-8 transition-all duration-1000 ${
+        footerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="mb-4">
