@@ -67,9 +67,7 @@ This project is built with:
 * **shadcn/ui**
 
 ---
-
-You can paste this directly into your `README.md` file on GitHub. Let me know if you'd like to add sections like screenshots, badges, or contribution guidelines.
-
+Thanks for coming
 ```
 
 Let me know if you'd like this version saved as a file or need help adding any visuals or links!
