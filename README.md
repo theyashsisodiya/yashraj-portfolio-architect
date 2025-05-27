@@ -22,17 +22,18 @@ You can update this project by working locally with your preferred development e
 
 ```sh
 # Step 1: Clone the repository
-git clone ([](https://github.com/theyashsisodiya/yashraj-portfolio-architect/))
+git clone https://github.com/theyashsisodiya/yashraj-portfolio-architect/
 
 # Step 2: Navigate into the project directory
-cd <yashraj-portfolio-architect>
+cd yashraj-portfolio-architect
 
 # Step 3: Install project dependencies
 npm install
 
 # Step 4: Start the development server
 npm run dev
-````
+```
+
 
 ---
 
