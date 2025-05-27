@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
+Here's the final version of your README formatted in **Markdown** for GitHub:
 
-## Project info
+````markdown
+# Welcome to My Project
 
-**URL**: https://lovable.dev/projects/ad21fb4d-8a27-405b-ae9e-9620c15a3df4
+## 📌 Project Info
 
-## How can I edit this code?
+**Live URL**: [Project Link](https://special-space-broccoli-5wqg6j4r7r2vpjj-8080.app.github.dev/)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🛠️ How to Edit the Code
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ad21fb4d-8a27-405b-ae9e-9620c15a3df4) and start prompting.
+You can update this project by working locally with your preferred development environment.
 
-Changes made via Lovable will be committed automatically to this repo.
+### 1. Edit Locally Using Your IDE
 
-**Use your preferred IDE**
+#### Prerequisites:
+- [Node.js & npm installed](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+#### Steps:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Step 1: Clone the repository
+git clone ([](https://github.com/theyashsisodiya/yashraj-portfolio-architect/))
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Navigate into the project directory
+cd <yashraj-portfolio-architect>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install project dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
+````
+
+---
+
+## 🚀 Deployment
+
+To deploy this project, you can use any static hosting platform that supports Vite or React, such as **Vercel**, **Netlify**, or your preferred service.
+
+To create a production build:
+
+```sh
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+Then deploy the contents of the `dist` folder following your host’s deployment instructions.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🌐 Custom Domain Setup
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+If your hosting platform supports it, you can connect a custom domain to your deployment. Refer to your hosting provider’s documentation for detailed setup instructions.
 
-## What technologies are used for this project?
+---
+
+## 🧱 Tech Stack
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+* **Vite**
+* **React**
+* **TypeScript**
+* **Tailwind CSS**
+* **shadcn/ui**
 
-## How can I deploy this project?
+```
 
-Simply open [Lovable](https://lovable.dev/projects/ad21fb4d-8a27-405b-ae9e-9620c15a3df4) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+You can paste this directly into your `README.md` file on GitHub. Let me know if you'd like to add sections like screenshots, badges, or contribution guidelines.
+```
