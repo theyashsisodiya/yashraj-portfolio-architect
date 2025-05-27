@@ -70,5 +70,5 @@ This project is built with:
 Thanks for coming
 ```
 
-Let me know if you'd like this version saved as a file or need help adding any visuals or links!
+Personal portfolio 
 ```
