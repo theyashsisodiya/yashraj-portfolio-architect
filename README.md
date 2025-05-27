@@ -1,24 +1,4 @@
-The issue in your README file is that it ends with a **dangling code block** that was never properly closed.
 
-### ❌ The Problem:
-
-At the very end, you have this:
-
-```markdown
-```
-
-You can paste this directly into your `README.md` file on GitHub. Let me know if you'd like to add sections like screenshots, badges, or contribution guidelines.
-
-```
-```
-
-This part is **wrapped inside a code block**, but it's just regular text. Since it's not meant to be code, it shouldn't be in triple backticks (\`\`\`), and also it's missing a closing backtick block, which breaks the Markdown rendering on GitHub.
-
----
-
-### ✅ The Fix:
-
-Remove the incorrect triple backticks and treat the last paragraph as regular Markdown text. Here's the **corrected version**:
 
 ````markdown
 # Welcome to My Project
