@@ -57,8 +57,7 @@ const Contact = () => {
                 </p>
                 <Button 
                   asChild
-                  variant="outline"
-                  className="border-white/30 text-white hover:bg-white hover:text-blue-600 transition-all duration-300"
+                  className="bg-white/20 border border-white/30 text-white hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                 >
                   <a 
                     href={method.href}
@@ -83,7 +82,7 @@ const Contact = () => {
             </p>
             <Button 
               asChild
-              className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+              className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
             >
               <a href="mailto:theyashsisodiya@gmail.com?subject=Opportunity Discussion">
                 Start a Conversation
