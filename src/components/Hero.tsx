@@ -19,7 +19,7 @@ const Hero = () => {
           <div className="flex justify-center">
             <div className="relative">
               <img
-                src="https://avatars.githubusercontent.com/u/114719020?v=4"
+                src="https://avatars.githubusercontent.com/u/97979728?v=4"
                 alt="Yashraj Singh Sisodiya"
                 className="w-40 h-40 rounded-full border-4 border-white shadow-2xl hover:scale-105 transition-transform duration-300"
               />
