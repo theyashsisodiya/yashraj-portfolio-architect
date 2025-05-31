@@ -1,4 +1,5 @@
-import { Github, Mail, Phone } from 'lucide-react';
+
+import { Github, Mail, Phone, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
@@ -48,6 +49,22 @@ const Hero = () => {
             >
               <a href="#projects">View My Projects</a>
             </Button>
+            
+            <Button 
+              asChild
+              className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
+            >
+              <a 
+                href="https://github.com/theyashsisodiya/yashraj-portfolio-architect/blob/main/Yashraj_Sisodiya.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download Resume
+              </a>
+            </Button>
+            
             <Button 
               variant="outline" 
               asChild
