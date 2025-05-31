@@ -1,19 +1,70 @@
+
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Skills = () => {
   const { ref: skillsRef, isVisible: skillsVisible } = useScrollAnimation();
   
   const skills = [
-    { name: "Python", level: 90 },
-    { name: "Jenkins", level: 85 },
-    { name: "Docker", level: 88 },
-    { name: "Linux", level: 82 },
-    { name: "Git", level: 90 },
-    { name: "Ansible", level: 75 },
-    { name: "AWS", level: 80 },
-    { name: "GCP", level: 70 },
-    { name: "Agile Methodology", level: 85 },
-    { name: "Prompt Engineering", level: 88 }
+    { 
+      name: "Python", 
+      level: 90,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      color: "from-blue-400 to-yellow-400"
+    },
+    { 
+      name: "Jenkins", 
+      level: 85,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
+      color: "from-red-500 to-orange-500"
+    },
+    { 
+      name: "Docker", 
+      level: 88,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+      color: "from-blue-500 to-cyan-400"
+    },
+    { 
+      name: "Linux", 
+      level: 82,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+      color: "from-gray-800 to-gray-600"
+    },
+    { 
+      name: "Git", 
+      level: 90,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+      color: "from-orange-500 to-red-500"
+    },
+    { 
+      name: "Terraform", 
+      level: 75,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg",
+      color: "from-purple-500 to-indigo-500"
+    },
+    { 
+      name: "AWS", 
+      level: 80,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+      color: "from-orange-400 to-yellow-500"
+    },
+    { 
+      name: "GCP", 
+      level: 70,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+      color: "from-blue-500 to-green-400"
+    },
+    { 
+      name: "Kubernetes", 
+      level: 85,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+      color: "from-blue-600 to-purple-600"
+    },
+    { 
+      name: "React", 
+      level: 88,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      color: "from-cyan-400 to-blue-500"
+    }
   ];
 
   return (
@@ -34,27 +85,49 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
           {skills.map((skill, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+              className="group relative flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-110 cursor-pointer overflow-hidden"
             >
-              <div className="flex justify-between items-center mb-3">
-                <h3 className="text-lg font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
-                  {skill.name}
-                </h3>
-                <span className="text-sm font-medium text-gray-500">
-                  {skill.level}%
-                </span>
+              {/* Background gradient on hover */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`}></div>
+              
+              {/* Skill logo */}
+              <div className="relative z-10 mb-4 transform group-hover:scale-125 transition-transform duration-500">
+                <img
+                  src={skill.logo}
+                  alt={skill.name}
+                  className="w-16 h-16 object-contain filter group-hover:drop-shadow-lg transition-all duration-500"
+                  onError={(e) => {
+                    // Fallback to a simple colored circle if image fails
+                    e.currentTarget.style.display = 'none';
+                    const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                {/* Fallback icon */}
+                <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${skill.color} hidden items-center justify-center text-white font-bold text-lg`}>
+                  {skill.name.charAt(0)}
+                </div>
               </div>
               
-              <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
-                <div 
-                  className="h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full transition-all duration-1000 ease-out transform origin-left group-hover:scale-x-105"
-                  style={{ width: `${skill.level}%` }}
-                ></div>
+              {/* Skill name */}
+              <h3 className="relative z-10 text-lg font-semibold text-gray-800 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500 text-center">
+                {skill.name}
+              </h3>
+              
+              {/* Proficiency level */}
+              <div className="relative z-10 mt-2 text-sm font-medium text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
+                {skill.level}% Proficiency
               </div>
+              
+              {/* Animated border */}
+              <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-500"></div>
+              
+              {/* Glow effect */}
+              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500 transform scale-110`}></div>
             </div>
           ))}
         </div>
@@ -64,7 +137,7 @@ const Skills = () => {
             {["DevOps", "Cloud Computing", "CI/CD Pipelines", "Infrastructure as Code", "Container Orchestration", "Automation"].map((tag, index) => (
               <span 
                 key={index}
-                className="px-6 py-3 bg-white text-gray-700 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 font-medium"
+                className="px-6 py-3 bg-white text-gray-700 rounded-full shadow-md hover:shadow-lg hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 font-medium cursor-pointer"
               >
                 {tag}
               </span>

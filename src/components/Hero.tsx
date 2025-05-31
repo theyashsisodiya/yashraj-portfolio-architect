@@ -30,7 +30,7 @@ const Hero = () => {
 
           {/* Name and Title */}
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
               Yashraj Singh Sisodiya
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 font-medium">
