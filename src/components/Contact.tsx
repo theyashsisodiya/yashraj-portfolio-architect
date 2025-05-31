@@ -1,4 +1,5 @@
-import { Mail, Phone, Github } from 'lucide-react';
+
+import { Mail, Phone, Github, Download } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -78,6 +79,23 @@ const Contact = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="text-center mb-12">
+          <Button 
+            asChild
+            className="bg-white/20 border border-white/30 text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+          >
+            <a 
+              href="https://github.com/theyashsisodiya/yashraj-portfolio-architect/blob/main/Yashraj_Sisodiya.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
+              <Download className="w-5 h-5 mr-2" />
+              Download Resume
+            </a>
+          </Button>
         </div>
 
         <div className="text-center">
