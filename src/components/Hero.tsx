@@ -44,15 +44,16 @@ const Hero = () => {
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
+              variant="outline" 
               asChild
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full transition-all duration-300"
             >
               <a href="#projects">View My Projects</a>
             </Button>
             
             <Button 
               asChild
-              className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
             >
               <a 
                 href="https://github.com/theyashsisodiya/yashraj-portfolio-architect/blob/main/Yashraj_Sisodiya.pdf"
