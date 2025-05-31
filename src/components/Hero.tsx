@@ -22,7 +22,7 @@ const Hero = () => {
               <img
                 src="https://avatars.githubusercontent.com/u/97979728?v=4"
                 alt="Yashraj Singh Sisodiya"
-                className="w-40 h-40 rounded-full border-4 border-white shadow-2xl hover:scale-105 transition-transform duration-300"
+                className="w-60 h-60 rounded-full border-4 border-white shadow-2xl hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 opacity-20"></div>
             </div>
