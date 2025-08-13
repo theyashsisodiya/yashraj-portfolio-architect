@@ -10,7 +10,7 @@ const Projects = () => {
     {
       title: "N8n AI News & Job Automation",
       description: "Automated system that sends structured 24hr latest AI news and job updates via email. Uses cron trigger → Perplexity API → Gmail integration for scheduled daily updates.",
-      githubUrl: "https://github.com/theyashsisodiya",
+      githubUrl: "https://github.com/theyashsisodiya/latest-Al-new-and-job-update",
       technologies: ["N8n", "Perplexity API", "Gmail", "Cron", "Automation", "Webhooks"]
     },
     {
