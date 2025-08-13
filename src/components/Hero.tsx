@@ -10,11 +10,17 @@ const Hero = () => {
     <section 
       id="home" 
       ref={heroRef}
-      className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 transition-all duration-1000 ${
+      className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden transition-all duration-1000 ${
         heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="text-center space-y-8">
           {/* Profile Image */}
           <div className="flex justify-center">
@@ -22,9 +28,10 @@ const Hero = () => {
               <img
                 src="https://avatars.githubusercontent.com/u/97979728?v=4"
                 alt="Yashraj Singh Sisodiya"
-                className="w-60 h-60 rounded-full border-4 border-white shadow-2xl hover:scale-105 transition-transform duration-300"
+                className="w-60 h-60 rounded-full border-4 border-white shadow-2xl hover:scale-110 hover:rotate-3 transition-all duration-500 relative z-10"
               />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 opacity-20"></div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 opacity-20 animate-pulse"></div>
+              <div className="absolute inset-0 rounded-full border-4 border-gradient-to-r from-blue-400 to-purple-400 opacity-50 animate-ping"></div>
             </div>
           </div>
 
@@ -56,10 +63,9 @@ const Hero = () => {
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
             >
               <a 
-                href="https://github.com/theyashsisodiya/yashraj-portfolio-architect/blob/main/Yashraj_Sisodiya.pdf"
+                href="https://drive.google.com/file/d/1xjt4T0hLR_b3ceeEWhqs5Ws9eCEG4McB/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
-                download
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download Resume

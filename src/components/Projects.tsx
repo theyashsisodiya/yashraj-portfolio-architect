@@ -8,6 +8,12 @@ const Projects = () => {
   
   const projects = [
     {
+      title: "N8n AI News & Job Automation",
+      description: "Automated system that sends structured 24hr latest AI news and job updates via email. Uses cron trigger → Perplexity API → Gmail integration for scheduled daily updates.",
+      githubUrl: "https://github.com/theyashsisodiya",
+      technologies: ["N8n", "Perplexity API", "Gmail", "Cron", "Automation", "Webhooks"]
+    },
+    {
       title: "To-Do List CI/CD",
       description: "A Node.js To-Do List app deployed using Jenkins, Docker, GitHub & AWS. Implemented automated deployment pipeline.",
       githubUrl: "https://github.com/theyashsisodiya/node-todo-cicd",
@@ -39,12 +45,15 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-white to-gray-50"
+              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border-0 shadow-lg bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 backdrop-blur-sm relative overflow-hidden"
             >
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-purple-600/5 to-pink-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               <CardHeader className="pb-4">
                 <CardTitle className="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
                   {project.title}
