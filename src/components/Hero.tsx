@@ -2,6 +2,7 @@
 import { Github, Mail, Phone, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { ThreeBackground } from '@/components/ThreeBackground';
 
 const Hero = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
@@ -10,15 +11,15 @@ const Hero = () => {
     <section 
       id="home" 
       ref={heroRef}
-      className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden transition-all duration-1000 ${
+      className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 relative overflow-hidden transition-all duration-1000 ${
         heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
+      {/* 3D Animated Background */}
+      <ThreeBackground />
+      
+      {/* Gradient overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-transparent to-indigo-900/40"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="text-center space-y-8">
@@ -37,14 +38,14 @@ const Hero = () => {
 
           {/* Name and Title */}
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight" contentEditable suppressContentEditableWarning>
               Yashraj Singh Sisodiya
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 font-medium">
-              DevOps & Cloud Enthusiast | Building CI/CD Pipelines
+            <p className="text-xl md:text-2xl text-blue-200 font-medium" contentEditable suppressContentEditableWarning>
+              DevOps, Cloud, SRE & AI Automation Enthusiast
             </p>
-            <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-              Final Year B.Tech CSE Student at Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto" contentEditable suppressContentEditableWarning>
+              "I'm actively seeking internships and entry-level positions in DevOps, Cloud Engineering, Site Reliability Engineering, and AI Automation Engineering. Let's build something amazing together!"
             </p>
           </div>
 
@@ -53,14 +54,14 @@ const Hero = () => {
             <Button 
               variant="outline" 
               asChild
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full transition-all duration-300"
+              className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-3 rounded-full transition-all duration-300 backdrop-blur-sm"
             >
               <a href="#projects">View My Projects</a>
             </Button>
             
             <Button 
               asChild
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25"
             >
               <a 
                 href="https://drive.google.com/file/d/1xjt4T0hLR_b3ceeEWhqs5Ws9eCEG4McB/view?usp=drivesdk"
@@ -75,7 +76,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               asChild
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full transition-all duration-300"
+              className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-full transition-all duration-300 backdrop-blur-sm"
             >
               <a href="#contact">Get In Touch</a>
             </Button>
@@ -87,19 +88,19 @@ const Hero = () => {
               href="https://github.com/theyashsisodiya" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-600 transition-colors duration-200 transform hover:scale-110"
+              className="text-gray-400 hover:text-blue-400 transition-colors duration-200 transform hover:scale-110"
             >
               <Github size={24} />
             </a>
             <a 
               href="mailto:theyashsisodiya@gmail.com"
-              className="text-gray-600 hover:text-blue-600 transition-colors duration-200 transform hover:scale-110"
+              className="text-gray-400 hover:text-blue-400 transition-colors duration-200 transform hover:scale-110"
             >
               <Mail size={24} />
             </a>
             <a 
               href="tel:+917389022061"
-              className="text-gray-600 hover:text-blue-600 transition-colors duration-200 transform hover:scale-110"
+              className="text-gray-400 hover:text-purple-400 transition-colors duration-200 transform hover:scale-110"
             >
               <Phone size={24} />
             </a>

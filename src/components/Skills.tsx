@@ -12,12 +12,6 @@ const Skills = () => {
       color: "from-blue-400 to-yellow-400"
     },
     { 
-      name: "N8n", 
-      level: 88,
-      logo: "https://docs.n8n.io/assets/images/n8n-logo.png",
-      color: "from-purple-500 to-pink-500"
-    },
-    { 
       name: "Jenkins", 
       level: 85,
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
@@ -28,12 +22,6 @@ const Skills = () => {
       level: 88,
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
       color: "from-blue-500 to-cyan-400"
-    },
-    { 
-      name: "REST API", 
-      level: 85,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
-      color: "from-green-500 to-teal-500"
     },
     { 
       name: "Linux", 
@@ -48,6 +36,12 @@ const Skills = () => {
       color: "from-orange-500 to-red-500"
     },
     { 
+      name: "Ansible", 
+      level: 78,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg",
+      color: "from-red-600 to-black"
+    },
+    { 
       name: "AWS", 
       level: 80,
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
@@ -60,6 +54,18 @@ const Skills = () => {
       color: "from-blue-500 to-green-400"
     },
     { 
+      name: "N8n", 
+      level: 88,
+      logo: "https://docs.n8n.io/assets/images/n8n-logo.png",
+      color: "from-purple-500 to-pink-500"
+    },
+    { 
+      name: "REST API", 
+      level: 85,
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+      color: "from-green-500 to-teal-500"
+    },
+    { 
       name: "JSON", 
       level: 92,
       logo: "https://upload.wikimedia.org/wikipedia/commons/c/c9/JSON_vector_logo.svg",
@@ -70,12 +76,6 @@ const Skills = () => {
       level: 80,
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webhook/webhook-original.svg",
       color: "from-indigo-500 to-purple-500"
-    },
-    { 
-      name: "React", 
-      level: 88,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      color: "from-cyan-400 to-blue-500"
     }
   ];
 
@@ -146,7 +146,7 @@ const Skills = () => {
 
         <div className="mt-16 text-center">
           <div className="inline-flex flex-wrap gap-4 justify-center max-w-4xl">
-            {["DevOps", "Cloud Computing", "CI/CD Pipelines", "Infrastructure as Code", "Container Orchestration", "Automation", "API Integration", "Workflow Automation"].map((tag, index) => (
+            {["DevOps", "Cloud Computing", "CI/CD Pipelines", "Agile Methodology", "Automation", "API Integration", "Prompt Engineering", "SRE Practices"].map((tag, index) => (
               <span 
                 key={index}
                 className="px-6 py-3 bg-white text-gray-700 rounded-full shadow-md hover:shadow-lg hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 font-medium cursor-pointer"
