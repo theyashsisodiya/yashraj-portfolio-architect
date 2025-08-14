@@ -48,12 +48,6 @@ const Skills = () => {
       color: "from-orange-500 to-red-500"
     },
     { 
-      name: "Terraform", 
-      level: 75,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg",
-      color: "from-purple-500 to-indigo-500"
-    },
-    { 
       name: "AWS", 
       level: 80,
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
@@ -64,12 +58,6 @@ const Skills = () => {
       level: 70,
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
       color: "from-blue-500 to-green-400"
-    },
-    { 
-      name: "Kubernetes", 
-      level: 85,
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
-      color: "from-blue-600 to-purple-600"
     },
     { 
       name: "JSON", 
