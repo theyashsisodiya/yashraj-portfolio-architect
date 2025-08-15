@@ -5,7 +5,7 @@ import * as random from 'maath/random/dist/maath-random.esm'
 import * as THREE from 'three'
 
 // Floating Neural Particles
-function NeuralParticles(props: any) {
+function NeuralParticles() {
   const ref = useRef<any>()
   const sphere = useMemo(() => random.inSphere(new Float32Array(5000), { radius: 2.5 }), [])
   
@@ -19,7 +19,7 @@ function NeuralParticles(props: any) {
   
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
+      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false}>
         <PointMaterial
           transparent
           color="#00f5ff"
