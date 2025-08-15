@@ -59,7 +59,8 @@ const AboutMe = () => {
               <span className="px-4 py-2 bg-accent/20 text-accent rounded-full font-medium border border-accent/30 animate-pulse-glow">DevOps Expert</span>
             </div>
 
-            {/* 3D Computer Panel */}
+            {/* 3D Computer Panel - Temporarily disabled for debugging */}
+            {/*
             <div className="mt-8">
               <ThreeDComputerPanel 
                 title="Current Status"
@@ -67,17 +68,23 @@ const AboutMe = () => {
                 subtitle="B.Tech CSE, Ready for Full-time Roles"
               />
             </div>
+            */}
           </motion.div>
 
-          {/* Animated Tech Guy */}
+          {/* Animated Tech Guy - Temporarily disabled for debugging */}
           <motion.div 
             className="flex flex-col items-center space-y-6"
             initial={{ opacity: 0, x: 50 }}
             animate={aboutVisible ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
+            {/*
             <div className="w-full max-w-md">
               <AnimatedTechGuy />
+            </div>
+            */}
+            <div className="w-full max-w-md h-64 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center border border-primary/30">
+              <p className="text-primary text-lg font-semibold">3D Animation Loading...</p>
             </div>
             <p className="text-center text-foreground/70 italic">
               "Building the future with AI automation and cloud technologies"
