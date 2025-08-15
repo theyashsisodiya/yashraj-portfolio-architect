@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Box, Text3D, Sphere } from '@react-three/drei'
+import { Box, Sphere } from '@react-three/drei'
 
 function ComputerPanelModel() {
   const panelRef = useRef<any>()

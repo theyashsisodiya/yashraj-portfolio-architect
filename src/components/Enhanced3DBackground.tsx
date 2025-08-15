@@ -1,6 +1,6 @@
-import { useRef, useMemo, useEffect } from 'react'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Points, PointMaterial, Sphere, Text3D, Environment } from '@react-three/drei'
+import { useRef, useMemo } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { Points, PointMaterial } from '@react-three/drei'
 import * as random from 'maath/random/dist/maath-random.esm'
 import * as THREE from 'three'
 
@@ -145,44 +145,41 @@ function TechTerminal() {
   )
 }
 
-// Neural Network Connections
-function NeuralConnections() {
-  const linesRef = useRef<any>()
+// Floating Particles (simplified)
+function FloatingOrbs() {
+  const orbsRef = useRef<any[]>([])
   
   useFrame((state) => {
-    if (linesRef.current) {
-      linesRef.current.rotation.z = state.clock.elapsedTime * 0.1
-    }
+    orbsRef.current.forEach((orb, i) => {
+      if (orb) {
+        orb.position.y = Math.sin(state.clock.elapsedTime + i * 0.5) * 0.3
+        orb.rotation.x += 0.01
+        orb.rotation.y += 0.01
+      }
+    })
   })
 
-  const points = useMemo(() => {
-    const pts = []
-    for (let i = 0; i < 50; i++) {
-      pts.push(
-        new THREE.Vector3(
-          (Math.random() - 0.5) * 10,
-          (Math.random() - 0.5) * 10,
-          (Math.random() - 0.5) * 10
-        )
-      )
-    }
-    return pts
-  }, [])
-
   return (
-    <group ref={linesRef}>
-      {points.map((point, i) => (
-        <line key={i}>
-          <bufferGeometry>
-            <bufferAttribute
-              attach="attributes-position"
-              count={2}
-              array={new Float32Array([0, 0, 0, point.x, point.y, point.z])}
-              itemSize={3}
-            />
-          </bufferGeometry>
-          <lineBasicMaterial color="#00f5ff" transparent opacity={0.1} />
-        </line>
+    <group>
+      {Array.from({ length: 12 }, (_, i) => (
+        <mesh
+          key={i}
+          ref={(el) => (orbsRef.current[i] = el)}
+          position={[
+            Math.cos(i * Math.PI * 2 / 12) * 6,
+            Math.sin(i * 0.5) * 2,
+            Math.sin(i * Math.PI * 2 / 12) * 6 - 8
+          ]}
+        >
+          <sphereGeometry args={[0.05, 8, 8]} />
+          <meshStandardMaterial
+            color="#00f5ff"
+            transparent
+            opacity={0.6}
+            emissive="#00f5ff"
+            emissiveIntensity={0.2}
+          />
+        </mesh>
       ))}
     </group>
   )
@@ -210,7 +207,7 @@ export const Enhanced3DBackground = () => {
         <AIDataCubes />
         <FloatingTechSpheres />
         <TechTerminal />
-        <NeuralConnections />
+        <FloatingOrbs />
       </Canvas>
     </div>
   )
